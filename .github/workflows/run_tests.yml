@@ -1,8 +1,11 @@
 name: Automated tests
 
 on:
-  push
-
+  workflow_dispatch:
+    inputs:
+      deployment_target:
+        description: Run test_successful_form_fields
+        required: true
 jobs:
   test:
     runs-on: ubuntu-latest
